@@ -378,12 +378,27 @@ def cos(x):
         return [math.cos(val.convert_to(radians).get_value()) for val in x]
     else:
         return math.cos(x.convert_to(radians).get_value())
-    
+
 def sin(x):
     if np.iterable(x):
         return [math.sin(val.convert_to(radians).get_value()) for val in x]
     else:
         return math.sin(x.convert_to(radians).get_value())
+
+def tg(x):
+    if np.iterable(x):
+        return [math.tan(val.convert_to(radians).get_value()) for val in x]
+    else:
+        return math.tan(x.convert_to(radians).get_value())
+
+
+
+
+
+
+
+
+
 
 
 units.registry[BasicUnit] = units.registry[TaggedValue] = BasicUnitConverter()
